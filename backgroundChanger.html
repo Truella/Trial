@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<title>Background Change</title>
+				<link rel="stylesheet" href="BgChange.css">
+				<style>
+.container{
+				background: #E0F6FF ;
+				text-align: center ;
+				padding: 100px;
+}
+#btn{
+				padding: 10px  ;
+}
+				</style>
+</head>
+<body>
+				<div id="div" class="container">
+								<input id="btn" type="button" value="Click Me! ">
+				</div>
+<script>
+				const div = document.getElementById("div");
+const btn = document.getElementById("btn");
+let bgColors = ["blue","green", "red", "purple", "orange", "pink", "gold", "indigo", "violet", "cyan"]
+btn.addEventListener("click",function () {
+				let randomIndex = Math.floor(Math.random() * bgColors.length);		
+				randomIndex = (randomIndex++) % bgColors.length ;
+				div.style.backgroundColor = bgColors[randomIndex] ;
+})
+
+</script>				
+</body>
+</html>
